@@ -1,15 +1,4 @@
-bash
-
-python3 << 'PYEOF'
-# Read all images
-imgs = {}
-names = ['banner_revendedor','banner_envios','banner_magnesio','citrato_combo','creatina']
-for n in names:
-    with open(f'/tmp/img_{n}.txt') as f:
-        imgs[n] = f.read().strip()
-
-# Build the full HTML
-html = f'''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -771,16 +760,7 @@ function toggleFaq(el){{
 }}
 </script>
 </body>
-</html>'''
-
-with open('/mnt/user-data/outputs/bioser-balance-glutamina.html', 'w', encoding='utf-8') as f:
-    f.write(html)
-
-print(f'Done! File size: {len(html):,} bytes ({len(html)/1024:.1f} KB)')
-PYEOF
-Salida
-
-Done! File size: 418,270 bytes (408.5 KB)
+</html>
 Listo
 
 Se quedó sin mensajes gratuitos hasta 5:20 a.m.
